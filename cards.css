@@ -1,0 +1,299 @@
+:root{
+  --primary-bg: #121212;
+  --primary-text: #908d96;
+  --components: #7a5af5;
+
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+
+    --font-color: #fefefe;
+    --font-color-sub: #7e7e7e;
+    --bg-color: #111;
+    --main-color: #fefefe;
+}
+
+   
+   
+   /* Chapter Buttons */
+   :focus {
+    outline: 0;
+    border-color: #2260ff;
+    box-shadow: 0 0 0 4px #b5c9fc;
+  }
+  
+  .chapter-btn div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+  
+  .chapter-btn input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  .chapter-btn input[type="radio"]:checked + span {
+    box-shadow: 0 0 0 0.0625em #0043ed;
+    background-color: #dee7ff;
+    z-index: 1;
+    color: #0043ed;
+  }
+  
+  label span {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    position: relative;
+    margin-left: .0625em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: .05em;
+    color: #3e4963;
+    text-align: center;
+    transition: background-color .5s ease;
+  }
+  
+  label:first-child span {
+    border-radius: .375em 0 0 .375em;
+  }
+  
+  label:last-child span {
+    border-radius: 0 .375em .375em 0;
+  }
+
+  
+  
+  /* Chapter Cards */
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    height: 90px;
+    background: #353535;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  .img1 {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: url("./Assets/img/Chapters/chap1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img2 {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: url("./Assets/img/Chapters/Chapter2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img3 {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: url("./Assets/img/Chapters/chap3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img4 {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: url("./Assets/img/Chapters/chap4.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img5 {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: url("./Assets/img/Chapters/chap5.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .textBox {
+    width: calc(100% - 90px);
+    margin-left: 10px;
+    color: white;
+    font-family: 'Poppins' sans-serif;
+  }
+  
+  .textContent {
+    display: block;
+  }
+ 
+  
+  .h1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .p {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  
+
+  /* Card characters */
+#character-heading{
+  text-align: center;
+  color: var(--font-color);
+  margin: 1rem 0;
+}
+
+.characters-profile {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Add a gap between columns and rows */
+}
+
+.char-card {
+  --font-color: #fefefe;
+  --font-color-sub: #7e7e7e;
+  --bg-color: #111;
+  --main-color: #fefefe;
+  width: 150px;
+  height: 150px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 5px;
+
+  transition: all .50s ease;
+  cursor: pointer;
+}
+
+.char-card:hover{
+  box-shadow: rgba(238, 21, 184, 0.25) 0px 54px 55px, 
+  rgba(83, 5, 107, 0.12) 0px -12px 30px,
+   rgba(181, 10, 233, 0.12) 0px 4px 6px, 
+   rgba(243, 6, 252, 0.17) 0px 12px 13px, 
+   rgba(248, 5, 248, 0.09) 0px -3px 5px;
+
+   transform: scale(1.02);
+}
+
+
+.card-title {
+  text-align: center;
+  color: var(--font-color);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card-title span a {
+  font-size: 13px;
+  color: var(--font-color-sub);
+}
+
+/* Different Characters */
+.card-photo1 {
+  transform: scale(0.3) translate(220px, 230px);
+  width: 350px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background-repeat: no-repeat;
+  background-image: url("./Assets/img/sung.png");
+  background-size: cover;
+}
+
+.card-photo2 {
+  transform: scale(0.3) translate(220px, 230px);
+  width: 350px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background-repeat: no-repeat;
+  background-image: url("./Assets/img/character/chae-hae.jpg");
+  background-size: cover;
+}
+
+.card-photo3 {
+  transform: scale(0.3) translate(220px, 230px);
+  width: 350px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background-repeat: no-repeat;
+  background-image: url("./Assets/img/character/Go-Gunhee.jpg");
+  background-size: cover;
+}
+
+.card-photo4 {
+  transform: scale(0.3) translate(220px, 230px);
+  width: 350px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background-repeat: no-repeat;
+  background-image: url("./Assets/img/character/johee.jpg");
+  background-size: cover;
+}
+
+.card-photo5 {
+  transform: scale(0.3) translate(220px, 230px);
+  width: 350px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background-repeat: no-repeat;
+  background-image: url("./Assets/img/character/Choi-Jong-in.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-photo6 {
+  transform: scale(0.3) translate(220px, 230px);
+  width: 350px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background-repeat: no-repeat;
+  background-image: url("./Assets/img/character/Baek-Yoon-Hoo.jpg");
+  background-size: cover;
+  background-position: center;
+}

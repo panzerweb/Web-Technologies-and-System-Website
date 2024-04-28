@@ -1,0 +1,116 @@
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+  :root{
+    --primary-bg: #121212;
+    --primary-text: #908d96;
+    --components: #7a5af5;
+  
+      --glow-color: rgb(217, 176, 255);
+      --glow-spread-color: rgba(191, 123, 255, 0.781);
+      --enhanced-glow-color: rgb(231, 206, 255);
+      --btn-color: rgb(100, 61, 136);
+  }
+
+  @media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+
+  }
+@media (max-width: 1280px) {
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .nav_links a{
+    padding: 5px 0;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1090px) {
+  #menu-icon{
+    display: flex;
+  }  
+  .nav_links{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: 29vh;
+    background: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
+  }
+
+  .nav_links a{
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all .50s ease;
+  }
+  .nav_links.open{
+    right: 2%;
+  }
+}
+
+/* Add a background color when the navbar is scrolled */
+#header-nav.scrolled {
+  background-color: var(--primary-bg);
+}
+
+
+@media screen and (max-width: 1024px){
+  
+  
+  .header-home .container .welcome #title-home{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
+
+  .overlapping-image{
+    margin-top: 7rem;
+  }
+
+  
+  /* Reverse the order of main and side */
+    .main {
+      order: -1; /* Display main section on top */
+  }
+
+  .side {
+      order: 1; /* Display side section at the bottom */
+      border-right: none; /* Remove the border */
+  }
+
+  #card-img{
+    display: none;
+  }
+
+  #card-img-mobile{
+    display: block;
+  }
+}
+
+/* Media query for mobile devices (screen width up to 480px) */
+@media (max-width: 480px) {
+  .overlapping-image {
+      margin-top: 13rem; /* Adjust the margin-top for smaller devices */
+  }
+}
+@media (max-width: 390px) {
+  .overlapping-image {
+      margin-top: 11rem; /* Adjust the margin-top for smaller devices */
+  }
+}
+
+
+@media (max-width: 320px) {
+  .overlapping-image {
+      margin-top: 1rem; /* Adjust the margin-top for smaller devices */
+  }
+}
